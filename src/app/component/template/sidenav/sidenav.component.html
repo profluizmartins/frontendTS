@@ -1,0 +1,28 @@
+<mat-sidenav-container class="container" >
+    <mat-sidenav class="sidenav" mode="side" opened  
+        fixedInViewport="true" fixedTopGap="64" fixedBottomGap="64" >
+        <mat-nav-list class="nav-list" >
+            <a mat-list-item  routerLink="/"> 
+                <i class="material-icons">home</i>
+                Inicio
+            </a>
+            <a mat-list-item routerLink="/cidades">
+                <i class="material-icons">location_city</i>
+                Cidade
+            </a>
+            <a mat-list-item routerLink="/bibliotecas">
+                <i class="material-icons">local_library</i> 
+                Biblioteca
+            </a>
+            <a mat-list-item routerLink="/exemplos">
+                <i class="material-icons">help</i> 
+                Exemplos
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        
+        <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

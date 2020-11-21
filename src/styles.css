@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.msg-success {
+    background-color: seagreen;
+    color: #fff;
+}
+
+.msg-success .mat-button-wrapper{
+    color: #fff;
+}
+
+.msg-error {
+    background-color: rgb(221, 41, 41);
+    color: #fff;
+}
+
+
+.msg-error .mat-button-wrapper{
+    color: #fff;
+}
+
+.loading-shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

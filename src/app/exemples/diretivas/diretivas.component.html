@@ -1,0 +1,18 @@
+<mat-card class="example-card  mat-elevation-z3" >
+    <mat-card-header>
+      <mat-card-title>Exemplos de Diretivas e Bindings</mat-card-title>
+    </mat-card-header>
+   
+    <p appRed>Exemplo de Diretiva de Atributo</p>
+   
+    <ul>
+        <li *para="let cid cada ['Goiânia', 'Anápolis', 'Inhumas']">{{ cid }}</li>
+    </ul>
+
+
+    <p>
+        <button mat-raised-button color="primary" (click)="mensagemDeLog()">Mostrar Console</button>
+    </p>
+
+    <p [id]="variavel">fadsfda</p>
+</mat-card>

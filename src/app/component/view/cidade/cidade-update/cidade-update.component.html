@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-title>Alterar Cidade</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome da Cidade"
+            [(ngModel)]="cidade.nomeCidade" 
+            name="nomeCidade">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Sigla do Estado"
+            [(ngModel)]="cidade.siglaEstado"
+            name="siglaEstado">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button color="primary" (click)="salvarCidade()">Salvar</button>
+    <button mat-raised-button color="warn" routerLink="/cidades" >Cancelar</button>
+</mat-card>
+
+
