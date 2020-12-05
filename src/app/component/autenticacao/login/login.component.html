@@ -1,0 +1,10 @@
+<h2 class="card-title">Entrar</h2>
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+    <mat-form-field>
+        <input matInput placeholder="Usuário" [(ngModel)]="usuario.login" name="login" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="password" placeholder="Senha" [(ngModel)]="usuario.senha" name="senha"  autocomplete="on" required>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.form.invalid">Entrar</button>
+</form>

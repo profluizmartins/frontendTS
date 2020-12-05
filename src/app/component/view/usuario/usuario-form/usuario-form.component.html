@@ -1,0 +1,50 @@
+<mat-card>
+    <mat-card-title>{{tituloPagina}}</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="usuario.nomeUsuario" name="nomeUsuario">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Login" [(ngModel)]="usuario.login" name="login">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <input matInput [matDatepicker]="picker" placeholder="Data de Nascimento" [(ngModel)]="usuario.dtNascimento"
+                name="dtNascimento">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <!--
+        <mat-form-field>
+            <input matInput [matDatepicker]="dp">
+            <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+            <mat-datepicker #dp></mat-datepicker>
+            <input matInput placeholder="Data de Nascimento" [(ngModel)]="usuario.dtNascimento" name="dtNascimento">
+        </mat-form-field>-->
+
+        <mat-form-field appearance="fill">
+            <mat-label>Nivel de acesso</mat-label>
+            <mat-select [(ngModel)]="usuario.nivel" name="nivel">
+                <mat-option *ngFor="let nivel of niveis" [value]="nivel.id">
+                    {{nivel.desc}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [type]="hide? 'password': 'text' " placeholder="Senha" [(ngModel)]="usuario.senha"
+                name="senha">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                
+                <mat-icon matSuffix>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+
+
+    </form>
+    <button mat-raised-button color="primary" (click)="salvarUsuario()">Salvar</button>
+    <button mat-raised-button color="warn" routerLink="/usuario">Cancelar</button>
+</mat-card>

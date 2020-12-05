@@ -1,3 +1,4 @@
+import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -39,7 +40,16 @@ import { BibliotecaUpdateComponent } from './component/view/biblioteca/bibliotec
 import { ExemploComponent } from './component/exemplo/exemplo.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { UsuarioListComponent } from './component/view/usuario/usuario-list/usuario-list.component';
+import { DataPipe } from './pipe/data.pipe';
+import { UsuarioFormComponent } from './component/view/usuario/usuario-form/usuario-form.component';
+import { UsuarioUpdateComponent } from './component/view/usuario/usuario-update/usuario-update.component';
+import { GetNivelPipe } from './pipe/get-nivel.pipe';
+import { LoginComponent } from './component/autenticacao/login/login.component';
+import { CadastroComponent } from './component/autenticacao/cadastro/cadastro.component';
+import { MainComponent } from './component/autenticacao/main/main.component';
 
 
 @NgModule({
@@ -60,7 +70,15 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     CidadeUpdateComponent,
     ConfirmDeleteComponent,
     BibliotecaUpdateComponent,
-    ExemploComponent
+    ExemploComponent,
+    UsuarioListComponent,
+    DataPipe,
+    UsuarioFormComponent,
+    UsuarioUpdateComponent,
+    GetNivelPipe,
+    LoginComponent,
+    CadastroComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +100,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatDialogModule,
     MatSelectModule,
     MatAutocompleteModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
